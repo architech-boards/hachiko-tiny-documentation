@@ -1,7 +1,8 @@
 .. _quick:
 
+*****************
 Quick start guide
-^^^^^^^^^^^^^^^^^
+*****************
 
 This document will guide you from importing the virtual machine to debugging an *Hello World!* example on a customized Linux distribution you will generate with **OpenEmbedded**/**Yocto** toolchain.
 
@@ -25,12 +26,17 @@ Be sure you have the proper version of sources and binaries by running a patch s
 
 3. Download and execute the patch script
 
-.. host::
+.. raw:: html
 
- | cd ~/Documents
- | wget http://downloads.architechboards.com/sdk/virtual_machine/patch.sh
- | chmod +x patch.sh
- | ./patch.sh
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-191' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-191" class="language-markup">cd ~/Documents
+ wget http://downloads.architechboards.com/sdk/virtual_machine/patch.sh
+ chmod +x patch.sh
+ ./patch.sh</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 4. When the script successfully completes, it displays this message
 
@@ -55,27 +61,40 @@ Build
 2. The first screen gives you two choices: *ArchiTech* and *3rd Party*. Choose *ArchiTech*.
 
 .. image:: _static/splash1.jpg
+    :align: center
 
 3. Select Hachiko as board you want develop on. 
 
 .. image:: _static/splashscreen_board_selection.jpg
+    :align: center
 
 4. A new screen opens up from where you can perform a set of actions. Click on *Run bitbake* to obtain a terminal ready to start to build an image.
 
 .. image:: _static/splash3.jpg
+    :align: center
 
 5. Open *local.conf* file:
 
-.. host::
+.. raw:: html
 
- gedit conf/local.conf
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-192' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-192" class="language-markup">gedit conf/local.conf</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 6. Go to the end of the file and add the following lines:
 
-.. host::
+.. raw:: html
 
- | EXTRA_IMAGE_FEATURES = "tools-debug debug-tweaks"
- | IMAGE_INSTALL_append = " tcf-agent"
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-193' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-193" class="language-markup">EXTRA_IMAGE_FEATURES_append = " tools-debug debug-tweaks"
+ IMAGE_INSTALL_append = " tcf-agent"</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 This will trigger the installation of a features set onto the final root file system, like *tcf-agent* and *gdbserver*.
 
@@ -83,21 +102,36 @@ This will trigger the installation of a features set onto the final root file sy
 
 8. Build *tiny-image* image by means of the following command:
 
-.. host::
+.. raw:: html
 
- bitbake tiny-image
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-194' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-194" class="language-markup">bitbake tiny-image</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 At the end of the build process, the image will be saved inside directory:
 
-.. host::
+.. raw:: html
 
- /home/architech/architech_sdk/architech/hachiko-tiny/yocto/build/tmp/deploy/images/hachiko
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-195' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-195" class="language-markup">/home/architech/architech_sdk/architech/hachiko-tiny/yocto/build/tmp/deploy/images/hachiko</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 9. Setup *sysroot* directory on your host machine:
 
-.. host::
+.. raw:: html
 
- sudo tar -xzf /home/architech/architech_sdk/architech/hachiko-tiny/yocto/build/tmp/deploy/images/hachiko/tiny-image-hachiko.tar.bz2 -C /home/architech/architech_sdk/architech/hachiko-tiny/sysroot/
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-196' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-196" class="language-markup">sudo tar -xzf /home/architech/architech_sdk/architech/hachiko-tiny/yocto/build/tmp/deploy/images/hachiko/tiny-image-hachiko.tar.bz2 -C /home/architech/architech_sdk/architech/hachiko-tiny/sysroot/</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 .. note::
 
@@ -121,14 +155,17 @@ The time to create a simple *HelloWorld!* application using **Eclipse** has come
 1. Return to the **Splashscreen**, which we left on Hachiko board screen, and click on *Develop with Eclipse*.
 
 .. image:: _static/splash4.jpg
+    :align: center
 
 2. Go to *File→ New→ Project*, select *C/C++→ C Project* and press *next* button.
 
 .. image:: _static/eclipse-newprj1.jpg
+    :align: center
 
 3. Insert *HelloWorld* as project name, select *Hello World ANSI C Autotools Project* and press *next* button.
 
-.. image:: _static/eclipse-newprj2.jpg
+.. image:: _static/eclipse-new-project.jpg
+    :align: center
 
 4. Insert *Author* field and click on *Finish* button. Select *Yes* on the *Open Associated Perspective?* question.
 
@@ -141,28 +178,48 @@ Use an ethernet cable to connect the board (connector XF1) to your PC.
 Configure your workstation ip address as 192.168.0.100.
 Make sure the board can be seen by your host machine:
 
-.. board::
+.. raw:: html
 
- | ifconfig eth0 192.168.0.10
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-281' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-281" class="language-markup">ifconfig eth0 192.168.0.10</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
-.. host::
+.. raw:: html
 
- | ping 192.168.0.10
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-197' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-197" class="language-markup">ping 192.168.0.10</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 If the output is similar to this one:
 
-.. host::
+.. raw:: html
 
- | 64 bytes from 192.168.0.100: icmp_req=1 ttl=64 time=0.946 ms
- | 64 bytes from 192.168.0.100: icmp_req=2 ttl=64 time=0.763 ms
- | 64 bytes from 192.168.0.100: icmp_req=3 ttl=64 time=0.671 ms
- | 64 bytes from 192.168.0.100: icmp_req=4 ttl=64 time=0.793 ms
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-198' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-198" class="language-markup">64 bytes from 192.168.0.100: icmp_req=1 ttl=64 time=0.946 ms
+ 64 bytes from 192.168.0.100: icmp_req=2 ttl=64 time=0.763 ms
+ 64 bytes from 192.168.0.100: icmp_req=3 ttl=64 time=0.671 ms
+ 64 bytes from 192.168.0.100: icmp_req=4 ttl=64 time=0.793 ms</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 then the ethernet connection is ok. Enable the remote debug with Yocto by typing this command on Hachiko console:
 
-.. board::
+.. raw:: html
 
- /etc/init.d/tcf-agent restart
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-282' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-282" class="language-markup">/etc/init.d/tcf-agent restart</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 On the Host machine, follow these steps to let **Eclipse** deploy and debug your application:
 
@@ -171,16 +228,19 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 * Locate your project and select it to bring up a new tabbed view in the *Debug Configurations* Dialog.
 
 .. image:: _static/debugform.jpg
+    :align: center
 
 * Insert in *C/C++ Application* the filepath (on your host machine) of the compiled binary.
 * Click on *New* button near the drop-down menu in the *Connection* field.
 * Select *TCF* icon.
 
 .. image:: _static/tcf1.jpg
+    :align: center
 
 * Insert in *Host Name* and *Connection Name* fields the IP address of the target board. (e.g. 192.168.0.10)
 
 .. image:: _static/tcf2.jpg
+    :align: center
 
 * Then press *Finish*.
 
@@ -188,29 +248,42 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 
 * Enter the absolute path on the target into which you want to deploy the cross-compiled application. Use the *Browse* button near *Remote Absolute File Path for C/C++Application:* field. No password is needed.
 
-.. image:: _static/remotepath.png
+.. image:: _static/remotepath.jpg
+    :align: center
 
 * Enter also in the path the name of the application you want to debug. (e.g. Hello)
 
 .. image:: _static/debug2.jpg
+    :align: center
 
 * Select *Debugger* tab
 
 .. image:: _static/gdb.jpg
+    :align: center
 
 * In GDB Debugger field, insert the filepath of gdb for your toolchain
 
-.. host::
+.. raw:: html
 
- /home/architech/architech_sdk/architech/hachiko-tiny/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-uclibceabi/arm-poky-linux-uclibceabi-gdb
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-199' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-199" class="language-markup">/home/architech/architech_sdk/architech/hachiko-tiny/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-uclibceabi/arm-poky-linux-uclibceabi-gdb</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 * In *Debugger* window there is a tab named *Shared Library*, click on it.
 * Add the libraries paths *lib* and *usr/lib* of the rootfs (which must be the same used in the target board)
 
-.. host::
+.. raw:: html
 
- | /home/architech/architech_sdk/architech/hachiko-tiny/sysroot/lib
- | /home/architech/architech_sdk/architech/hachiko-tiny/sysroot/usr/lib
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-1910' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-1910" class="language-markup">/home/architech/architech_sdk/architech/hachiko-tiny/sysroot/lib
+ /home/architech/architech_sdk/architech/hachiko-tiny/sysroot/usr/lib</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 * Click *Debug* to login.
 * Accept the debug perspective. 
@@ -218,4 +291,3 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. important::
 
  If debug does not work, check on the board if *tcf-agent* is running and *gdbserver* has been installed.
-
