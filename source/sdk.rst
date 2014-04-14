@@ -3,11 +3,9 @@ SDK
 
 The SDK provided by *Architech* to support Hachiko is composed by several components, the most important of which are:
 
-* **Yocto**,
+* **Yocto**, and
 
-* **Eclipse**, and
-
-* **Qt Creator**
+* **Eclipse**
 
 Regarding the installation and configuration of these tools, you have many options:
 
