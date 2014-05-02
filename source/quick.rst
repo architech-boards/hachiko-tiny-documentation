@@ -55,8 +55,8 @@ Build
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-191' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-191" class="language-markup">gedit conf/local.conf</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-181' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-181" class="language-markup">gedit conf/local.conf</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -66,8 +66,8 @@ Build
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-192' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-192" class="language-markup">EXTRA_IMAGE_FEATURES_append = " tools-debug debug-tweaks"
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-182' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-182" class="language-markup">EXTRA_IMAGE_FEATURES_append = " tools-debug debug-tweaks"
  IMAGE_INSTALL_append = " tcf-agent"</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -82,8 +82,8 @@ This will trigger the installation of a features set onto the final root file sy
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-193' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-193" class="language-markup">bitbake tiny-image</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-183' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-183" class="language-markup">bitbake tiny-image</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -93,8 +93,8 @@ At the end of the build process, the image will be saved inside directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-194' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-194" class="language-markup">/home/architech/architech_sdk/architech/hachiko-tiny/yocto/build/tmp/deploy/images/hachiko</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-184' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-184" class="language-markup">/home/architech/architech_sdk/architech/hachiko-tiny/yocto/build/tmp/deploy/images/hachiko</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -104,8 +104,8 @@ At the end of the build process, the image will be saved inside directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-195' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-195" class="language-markup">sudo tar -xjf /home/architech/architech_sdk/architech/hachiko-tiny/yocto/build/tmp/deploy/images/hachiko/tiny-image-hachiko.tar.bz2 -C /home/architech/architech_sdk/architech/hachiko-tiny/sysroot/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-185' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-185" class="language-markup">sudo tar -xjf /home/architech/architech_sdk/architech/hachiko-tiny/yocto/build/tmp/deploy/images/hachiko/tiny-image-hachiko.tar.bz2 -C /home/architech/architech_sdk/architech/hachiko-tiny/sysroot/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -160,8 +160,8 @@ Make sure the board can be seen by your host machine:
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-281' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-281" class="language-markup">ifconfig eth0 192.168.0.10</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-271' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-271" class="language-markup">ifconfig eth0 192.168.0.10</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -169,8 +169,8 @@ Make sure the board can be seen by your host machine:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-196' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-196" class="language-markup">ping 192.168.0.10</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-186' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-186" class="language-markup">ping 192.168.0.10</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -180,8 +180,8 @@ If the output is similar to this one:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-197' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-197" class="language-markup">64 bytes from 192.168.0.100: icmp_req=1 ttl=64 time=0.946 ms
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-187' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-187" class="language-markup">64 bytes from 192.168.0.100: icmp_req=1 ttl=64 time=0.946 ms
  64 bytes from 192.168.0.100: icmp_req=2 ttl=64 time=0.763 ms
  64 bytes from 192.168.0.100: icmp_req=3 ttl=64 time=0.671 ms
  64 bytes from 192.168.0.100: icmp_req=4 ttl=64 time=0.793 ms</code></pre>
@@ -194,8 +194,8 @@ then the ethernet connection is ok. Enable the remote debug with Yocto by typing
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-282' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-282" class="language-markup">/etc/init.d/tcf-agent restart</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-272' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-272" class="language-markup">/etc/init.d/tcf-agent restart</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -245,8 +245,8 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-198' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-198" class="language-markup">/home/architech/architech_sdk/architech/hachiko-tiny/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-uclibceabi/arm-poky-linux-uclibceabi-gdb</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-188' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-188" class="language-markup">/home/architech/architech_sdk/architech/hachiko-tiny/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-uclibceabi/arm-poky-linux-uclibceabi-gdb</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -257,8 +257,8 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-199' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-199" class="language-markup">/home/architech/architech_sdk/architech/hachiko-tiny/sysroot/lib
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-189' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-189" class="language-markup">/home/architech/architech_sdk/architech/hachiko-tiny/sysroot/lib
  /home/architech/architech_sdk/architech/hachiko-tiny/sysroot/usr/lib</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
